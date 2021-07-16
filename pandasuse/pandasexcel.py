@@ -1,3 +1,4 @@
+import  matplotlib.pyplot as plt
 import pandas as pd
 data=pd.read_csv("data.csv")
 #print(data)
@@ -16,4 +17,8 @@ data.to_csv("newdata.csv",index=False)
 print(data)
 del data["newcol"]
 print(data)
-#print(data[(data["Run"]<=5000) |  ( (data["Run"]<=15000))])
+query=data[(data["Player"]=="A")]
+print(query)
+print(type(query))
+plt.plot(query["Run"],query["Run"])
+plt.show()
