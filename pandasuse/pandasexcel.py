@@ -1,6 +1,19 @@
 import  matplotlib.pyplot as plt
 import pandas as pd
+from sphinx.addnodes import index
+
 data=pd.read_csv("data.csv")
+
+print(data)
+query = data[(data["Player"] == "A")]
+data.loc[0,["Player"]]="Popat"
+#print(query)
+#print(query.index[0])
+#data=data.drop([0])
+print(data)
+
+
+"""
 #print(data)
 #print(type(data))
 player=data["Player"]
@@ -16,9 +29,11 @@ data["newcol"]=data["Run"]**2
 data.to_csv("newdata.csv",index=False)
 print(data)
 del data["newcol"]
+data.append(["M",1,2,3])
 print(data)
-query=data[(data["Player"]=="A")]
-print(query)
-print(type(query))
-plt.plot(query["Run"],query["Run"])
-plt.show()
+#query=data[(data["Player"]=="A")]
+#print(query)
+#print(type(query))
+#plt.plot(query["Run"],query["Run"])
+#plt.show()
+"""
