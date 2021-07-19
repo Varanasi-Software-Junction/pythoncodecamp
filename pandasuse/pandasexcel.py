@@ -5,11 +5,15 @@ from sphinx.addnodes import index
 data=pd.read_csv("data.csv")
 
 print(data)
-query = data[(data["Player"] == "A")]
-data.loc[0,["Player"]]="Popat"
+query = data[(data["Player"] == "B")]
+print(query)
+print("Index=",query.index[0])
+index=query.index[0]
+data.loc[index,["Player"]]="Popat"
+print(data)
 #print(query)
 #print(query.index[0])
-#data=data.drop([0])
+data=data.drop([0])
 print(data)
 
 
