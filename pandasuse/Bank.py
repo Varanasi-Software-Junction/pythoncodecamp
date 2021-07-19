@@ -13,7 +13,8 @@ def deposit(data):
     condition=data['Accno'] == accno
     reqindex = data.index[condition]
     print(reqindex[0])
-   # data.at[reqindex,'Balance'] += dep
+    data.loc[ reqindex[0] ,['Balance']] += dep
+    print(data)
    # print(data)
     #print(data.loc[])
 
