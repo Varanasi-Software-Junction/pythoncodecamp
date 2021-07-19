@@ -1,4 +1,4 @@
-+import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 import numpy as np
 def f(x):
     return x * x + x + 1
@@ -11,19 +11,17 @@ plt.grid()
 plt.plot(ex1,f(ex1))
 plt.plot(ex1,df(ex1))
 plt.show()
-previousx=-2
-upperlimit=2
-lowerlimit=-2
-gradient=df(previousx)
-for i in range(30):
-    mid = (lowerlimit + upperlimit )/2
-    gradient = df(mid)
-    if gradient<0:
-        lowerlimit=mid
-    else:
-        upperlimit=mid
-mid = (lowerlimit + upperlimit )/2
-print(mid)
+newx=3
+prevx=0
+m=0.1
 
+for i in range(300):
+   prevx=newx
+   gradient=df(prevx)
+   newx=prevx-m*gradient
+
+
+print(newx)
+print(df(newx))
 
 
