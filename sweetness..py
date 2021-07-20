@@ -12,7 +12,7 @@ for i in range (1,len(choc)-1):
             s=sweet[j]
             b=bitter[j]
             c=choc[j]
-            minpos=jm
+            minpos=j
 
     sweet[i],sweet[minpos]=sweet[minpos],sweet[i]
     bitter[i],bitter[minpos]=bitter[minpos],bitter[i]

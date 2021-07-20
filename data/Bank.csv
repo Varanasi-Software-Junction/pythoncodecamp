@@ -1,3 +1,4 @@
-Accno,Name,Balance
-1,Manas,1000000
-2,Abhishek,10000
+Accno,Name,Balance,Status
+1,Manas,1000101,Open
+2,Abhishek,21700,Closed
+3,Manjit,12000,Open

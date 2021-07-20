@@ -18,15 +18,18 @@ data.to_csv("data/new.csv", index =False)
 print(data)
 del data['Percent']
 print(data)
-query = data[(data['Phy']<=90) & (data['Phy']>=70)] #& fro and AND | for or
+query = data[(data['Chem'] <=90) & (data['Chem']>=70)] #& fro and AND | for or
 print(query)
-query1 = data[((data['Phy']+data['Chem']+data['Maths'])/300*100>=60)]
+
+query1 = data[((data['Phy']+data['Chem']+data['Maths'])/300*100 >=60)]
 print(query1)
 
-data2= pd.read_csv("data/new.csv")
+
+data2 = pd.read_csv("data/new.csv")
 print(data2)
-plt.plot(data2["Name"],data2["Percent"],color='green',marker='o')
+plt.bar(data2["Name"],data2["Percent"],color='green',width=0.8,alpha=0.5)# width breadth alpha=transparency
 plt.xlabel('Name')
 plt.ylabel('Percent')
 plt.title('Result')
+plt.grid()
 plt.show()
