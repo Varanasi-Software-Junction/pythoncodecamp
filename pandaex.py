@@ -27,6 +27,7 @@ print(query1)
 
 data2 = pd.read_csv("data/new.csv")
 print(data2)
+
 plt.bar(data2["Name"],data2["Percent"],color='green',width=0.8,alpha=0.5)# width breadth alpha=transparency
 plt.xlabel('Name')
 plt.ylabel('Percent')

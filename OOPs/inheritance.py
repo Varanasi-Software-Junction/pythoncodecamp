@@ -11,7 +11,7 @@ class C(A,B):
         A().f1()
         B().f1()
 
-c=C()
+c = C()
 c.f1()
 c.f2()
 c.f()
