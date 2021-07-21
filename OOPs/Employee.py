@@ -4,4 +4,4 @@ class Employee(pp.Person):
         pp.Person.__init__(self,name,age,address)
     def __str__(self):
         return "{0}, Salary={1}, Post={2}".format(pp.Person,self.s)
-e=Employee("pppu",56,"Delhi",1000,"VP")
+e=Employee("pappu",56,"Delhi",1000,"VP")
