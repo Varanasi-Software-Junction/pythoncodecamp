@@ -1,10 +1,14 @@
+class AgeException(Exception):
+    def __init__(self, message):
+        Exception.__init__(self,message)
+
 try: # Write the code whose exceptions need handling
     d={1:"One"}
     print(d[1])
     x=int("1")
     age=int(input("Age\n"))
     if age < 0:
-        raise ValueError("Age is -ve")#Throw your own exception
+        raise AgeException("Age is -ve")#Throw your own exception
 
 except KeyError as  error_message:#Handle the key errors
     print("Key Error " + str(error_message))
