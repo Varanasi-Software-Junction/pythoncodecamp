@@ -10,6 +10,7 @@ class C(A,B):
     def f(self):
         A().f1()
         B().f1()
+        
 
 c = C()
 c.f1()
