@@ -7,6 +7,7 @@ def bestfitModel(x,y):
     bestpower=0
     for r in range(1,6):
         model = numpy.poly1d(numpy.polyfit(x, y, 2))
+
         coeff=r2_score(y, model(x))
         if coeff>bestcoeff:
             bestcoeff=coeff
