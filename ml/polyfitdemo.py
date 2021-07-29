@@ -13,7 +13,7 @@ x=list(range(1,n + 1))
 #predictx=x
 print(n)
 print(y)
-pf=numpy.polyfit(x,y,1)
+pf=numpy.polyfit(x,y,3)
 print(pf)
 print(type(pf))
 model = numpy.poly1d(pf)

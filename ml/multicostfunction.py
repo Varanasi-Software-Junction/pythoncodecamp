@@ -27,6 +27,7 @@ error=0.00001
 x=np.linspace(start=-2,stop=2,num=200)
 y=np.linspace(start=-2,stop=2,num=200)
 x,y=np.meshgrid(x,y)
+print(x,y)
 doFit()
 fig=plt.figure(figsize=(16,12))
 ax=fig.gca(projection='3d')
