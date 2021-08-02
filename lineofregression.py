@@ -22,7 +22,7 @@ def linearregression(px,py):
 x=[12,15,21,25]
 y=[50,70,100,120]
 plt.plot(x,y)
-#plt.scatter(x,y)
-#plt.show()
+plt.scatter(x,y)
+plt.show()
 result = linearregression(x,y)
 print(result)
