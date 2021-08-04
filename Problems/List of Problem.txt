@@ -7,7 +7,7 @@ sublist  [3,4,6,8]
 3. Find all combinations that equal 10
 [2,5,9,1,6,8,1].
 4. Find all words starting with a vowel in a sentence
-This a train from Asansol to Chiraigaon.
+"This a train from Asansol to Chiraigaon."
 5. Change to proper case.
 sachin RAmesh tenDulKar to Sachin Ramesh Tendulkar
 6. There is a matrix
@@ -24,4 +24,14 @@ Apples=Aples, Banana =Ban
 [1,2,3,5,6]
 [1,2,0,3,5,6]
 [3,5,6]
-
+11. Whether a give number is in fibonacci series or not.
+12. Given two fib numbers print in reverse,
+    eg. 8,5 output= 8,5,3,2,1,1,0
+13. Input = 123 output=one two three
+14. Input number and check it perfect cube or not
+15. Add digits of a number until it gives single digit.
+    eg. 999
+        9+9+9=27
+        2+7=9
+        output= 27 9
+16. decimal to binary ,octal

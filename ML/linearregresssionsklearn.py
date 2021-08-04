@@ -1,6 +1,6 @@
 import pandas
 from sklearn.linear_model import LinearRegression
-df = pandas.read_csv("data/marks.csv")
+df = pandas.read_csv("../data/marks.csv")
 
 X= df[['Phy', 'Chemistry']]
 y = df['Percent']
