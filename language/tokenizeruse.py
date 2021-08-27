@@ -1,8 +1,9 @@
-import nltkpractice
-from nltkpractice.tokenize import TweetTokenizer
-from nltkpractice.tokenize import sent_tokenize
-from nltkpractice.tokenize import word_tokenize
-from nltkpractice.tokenize import RegexpTokenizer
+import nltk
+from nltk.tokenize import TweetTokenizer
+from nltk.tokenize import sent_tokenize
+from nltk.tokenize import word_tokenize
+from nltk.tokenize import RegexpTokenizer
+#from nltk.tokenize import  LegalitySyllableTokenizer
 
 data="EMail = Sachin@gmail.com, phone =9335874326"
 #data="for(int i=1;i<=10;i++)"
