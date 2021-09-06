@@ -35,3 +35,8 @@ Apples=Aples, Banana =Ban
         2+7=9
         output= 27 9
 16. decimal to binary ,octal
+17.Find sum of n factorials
+18. create an array i first n prime numbers
+19. given array 1,1,1,2,2,2,3,3,4,4,4
+        output 1,2,3,4
+20. find repeated word in a sentence

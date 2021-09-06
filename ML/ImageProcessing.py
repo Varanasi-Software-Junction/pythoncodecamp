@@ -16,7 +16,7 @@ def imagepad(img,verticalp,horizontalp):
         for c in range(mc):
             pic[r][c][0] = 255  # b value
             pic[r][c][1] = 255  # g value
-            pic[r][c][2] = 255  # r value
+            pic[r][c][2] = 255sllw  # r value
 
             pic[mr - r - 1][c][0] = 255  # b value
             pic[mr - r - 1][c][1] = 255  # g value

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Flex2</title>
+<style>
+	.a
+	{
+	width:300px;
+	height:50px;
+	background-color:red;
+	}
+	.b
+	{
+	width:300px;
+	height:50px;
+	background-color:yellow;
+	}
+	.c
+	{
+	width: 300px;
+	height:50px;
+	background-color:green;
+	}
+	.d
+	{
+	width: 300px;
+	height:50px;
+	background-color:blue;
+	}
+	.flex-container
+	{
+	background-color:teal;
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	justify-content:center;
+	
+	height:300px;	
+
+	}
+</style>
+</head>
+<body>
+<h1>Flex2<h1>
+<hr>
+<div class="flex-container">
+<div class="a">a</div><!--<div class="b">b</div><div class="a">a</div><div class="b">b</div><div class="a">a</div><div class="b">b</div>-->
+</div>
+<div class="flex-container">
+<div class="b">b</div><div class="a">a</div><div class="b">b</div><div class="a">a</div><div class="b">b</div><div class="a">a</div>
+</div>
+<div class="flex-container">
+<div class="c">c</div><div class="d">d</div><div class="c">c</div><div class="d">d</div>
+</div>
+<div class="flex-container">
+<div class="b" style="">This is C container</div>
+</div>
+
+
+</body>
+</html>

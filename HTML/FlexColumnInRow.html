@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Flex2</title>
+<style>
+	.a
+	{
+	width:300px;
+	height:50px;
+	background-color:red;
+	}
+	.b
+	{
+	width:300px;
+	height:50px;
+	background-color:yellow;
+	}
+	.c
+	{
+	width: 300px;
+	height:50px;
+	background-color:green;
+	}
+	.d
+	{
+	width: 300px;
+	height:50px;
+	background-color:blue;
+	}
+	.flex-container-row
+	{
+	background-color:teal;
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	justify-content:center;
+	flex-wrap:wrap;
+	
+	}
+	.flex-container-column-a
+	{
+	background-color:green;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	width:300px;
+	}
+	
+	.flex-container-column-b
+	{
+	background-color:#99cc00;
+	display:flex;
+	flex-direction:column;	
+	align-items:center;
+	justify-content:center;
+	width:300px;
+	}
+	
+	.flex-container-column-c
+	{
+	background-color:#990099;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	width:300px;
+	}
+</style>
+</head>
+<body>
+<div class="flex-container-row">
+	<div class="flex-container-column-a">
+		ONE
+		<div class="a">a</div><div class="b">b</div><div class="a">a</div>
+	</div>
+	<div class="flex-container-column-b">
+		TWO
+		<div class="b">b</div><div class="a">a</div><div class="b">b</div>
+	
+	</div>
+	<div class="flex-container-column-c">
+		THREE
+		<div class="a">a</div><div class="b">b</div><div class="a">a</div>	
+	</div >
+</div>
+</body>
+<html>

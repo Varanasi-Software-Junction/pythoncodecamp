@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Relative positioning
+</title>
+	<style>
+	input
+	{
+	width:300px
+	height:100px
+	}
+	
+	/*Relative positioning positions from it's previous entity*/
+		.relativeclass
+		{
+		position:relative;
+		left:10px;
+		top:20px;
+		background-color:red;
+		
+			}
+			/*Absolute positioning positions from top most and left most of the screen*/
+.absoluteclass
+		{
+		position:absolute;
+		left:10px;
+		top:20px;
+		background-color:yellow;
+		
+			}
+			/*Fixed position positions entity such that it has no effect of the scrolling*/
+		.fixedclass
+		{
+		position:fixed;
+		left:100px;
+		top=50px;
+		background-color:blue;
+		
+		}
+		/*Sticky positioning positions entity such that after coming to a certain position it has no scrolling effect*/
+		.stickyclass
+		{
+		position:sticky;
+		top :30px;
+		left:20px;
+		background-color:red;
+		}
+
+
+	</style>
+</head>
+<body>
+<input type="text"><input type="text"><input type="text" class="fixedclass" ><input class="relativeclass" type="text"><input type="text"><input type="text"><input type="text"><input type="text" class="absoluteclass"><input type="text"><input type="text"><input type="text"><input type="text"><input type="text"><input type="text"><input type="text"><input type="text"><input type="text">
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><input type="text" class="stickyclass"><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>
