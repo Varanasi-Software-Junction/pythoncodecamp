@@ -1,6 +1,6 @@
 import pandas as pd
-import matplotlib.pyplot as plt
-data=pd.read_csv('data/abhi.csv') #retriving data from CSV file
+#import matplotlib.pyplot as plt
+data=pd.read_csv('data/result.csv') #taking data from Excel(.csv formate) file
 print(data)
 phy = data['Phy'] #storing only one column in phy
 print(phy)
@@ -28,9 +28,9 @@ print(query1)
 data2 = pd.read_csv("data/new.csv")
 print(data2)
 
-plt.bar(data2["Name"],data2["Percent"],color='green',width=0.8,alpha=0.5)# width breadth alpha=transparency
+"""plt.bar(data2["Name"],data2["Percent"],color='green',width=0.8,alpha=0.5)# width breadth alpha=transparency
 plt.xlabel('Name')
 plt.ylabel('Percent')
 plt.title('Result')
 plt.grid()
-plt.show()
+plt.show()"""

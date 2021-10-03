@@ -1,10 +1,12 @@
+
+
 import cv2
 import numpy as np
 def readimage(readpath):
      a = cv2.imread(readpath) # reading image
      return a
 
-def showimage(pic):
+def showimage(pic): # it will show the image
     cv2.imshow("Picture", pic)
     cv2.waitKey(0)
 
@@ -16,7 +18,7 @@ def imagepad(img,verticalp,horizontalp):
         for c in range(mc):
             pic[r][c][0] = 255  # b value
             pic[r][c][1] = 255  # g value
-            pic[r][c][2] = 255sllw  # r value
+            pic[r][c][2] = 255  # r value
 
             pic[mr - r - 1][c][0] = 255  # b value
             pic[mr - r - 1][c][1] = 255  # g value
@@ -88,7 +90,7 @@ def blackwhite(img):
 
 
 
-readpath = "a1.jpg"
+readpath = "butterfly.jpg"
 pic = readimage(readpath)
 #pic1 = grayscale(pic)
 pic2 = verticalReverse(pic)
