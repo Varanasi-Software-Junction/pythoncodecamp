@@ -1,21 +1,24 @@
-l=[2,5,9,1,4,5,3,4,6,8,0,1]
-n=len(l)
-l= l + [l[n-1]-1]
-print(l)
-n=n+1
-maxlength = -1
-maxsequence = []
-currentseq = [l[0]]
+l = [10, 33, 3, 0]  # Input Array
+n = len(l)
+if n <= 0:
+    print("No Array")
+    exit(0)
+print("Input Array ", l)
+l = l + [l[n - 1] - 1]  # Add an extra element to the array to break the last sequence
 
-for i in range(1,n):
-    prev=l[i-1]
-    current=l[i]
-    if current>=prev:
+n = n + 1
+maxlength = 0  # initialize maxlnght so that it gets replaced the first time
+maxsequence = []  # Max sequence is blank initially
+currentseq = [l[0]]  # Start current seq with first element
+
+for i in range(1, n):  # Loop from 1
+    prev = l[i - 1]  # Element just before current one
+    current = l[i]  # The current element
+    if current >= prev:  # Current > Prev add new element to seq
         currentseq = currentseq + [current]
-    else:
-        if (len(currentseq)) > maxlength:
+    else:  # Increasing sequence broken
+        if (len(currentseq)) > maxlength:  # Length of current sequence greater than largest found thus far
             maxlength = len(currentseq)
             maxsequence = currentseq.copy()
         currentseq = [current]
-print(maxsequence)
-
+print("Max Sequence", maxsequence)
