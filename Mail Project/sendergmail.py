@@ -25,4 +25,4 @@ def mailSend(receiver,subject,mail_content,mailfrom):
     session.login('aventtesttech@gmail.com', sender_pass)  # login with mail_id and password
     session.send_message(msg)
     session.quit()
-    print('Mail Sent')
+    print('Mail Sent to ', receiver)
