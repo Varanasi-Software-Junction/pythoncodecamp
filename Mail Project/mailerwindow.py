@@ -1,8 +1,9 @@
 import tkinter.filedialog
+import smtplib
 from tkinter import *
 from tkinter import ttk, scrolledtext
 import MailThread as mt
-#import sendergmail as mailer
+import sendergmail as mailer
 from cefpython3 import cefpython as cef
 import ctypes
 
@@ -10,6 +11,11 @@ receivers = []
 
 
 def sendMail():
+    sender_pass = 'hjh76^%&^%PP'
+    session = smtplib.SMTP('smtp.gmail.com', 587)  # use gmail with port
+    session.starttls()  # enable security
+    session.login('aventtesttech@gmail.com', sender_pass)  # login with mail_id and password
+
     subject = subjecttext.get()
     content = contenttext.get("1.0", tkinter.END)
     fromaddress = fromtext.get()
@@ -17,9 +23,16 @@ def sendMail():
     mailaddresses = mailaddresses.split()
     print(mailaddresses, subject, content, fromaddress)
     for receiver in mailaddresses:
-        mailer = mt.MailThread(fromaddress, receiver, subject, content)
-        mailer.start()
+        mailer.mailSend(session,receiver,subject,content,fromaddress)
 
+
+
+    """
+    for receiver in mailaddresses:
+        mailer = mt.MailThread(session, fromaddress, receiver, subject, content)
+        mailer.start()
+    session.quit()
+    """
     # mailer.mailSend(receiverstext.get("1.0", tkinter.END),subjecttext.get(),contenttext.get("1.0", tkinter.END),fromtext.get())
 
 

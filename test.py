@@ -1,8 +1,12 @@
-# Program to generate a 2,4,2,4,2,4 series
+# Program to find all digits of a number
 
-t = 2
-for i in range(10):
-    print(t, end=",")
-    t = 6 - t
+n = 123
+sum = 0
+while n > 0:
+    rem = n % 10
+    n //= 10
+    sum += rem * rem
+
+print(sum)
 
 # End program
