@@ -17,12 +17,3 @@ class MailThread(threading.Thread):
 
     def run(self):
         sendergmail.mailSend(self.session, self.toaddress, self.subject, self.content, self.fromaddress)
-
-# Create new threads
-# thread1 = MailThread("Champak Roy","champaksworld@gmail.com","Hello Champak","Please meet me today")
-
-# Start new Threads
-# thread1.start()
-
-
-# print("Exiting Main Thread")
