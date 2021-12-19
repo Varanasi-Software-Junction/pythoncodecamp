@@ -30,12 +30,6 @@ def sendMail():
     for receiver in mailaddresses:
         mailer.mailSend(session, receiver, subject, content, fromaddress)
 
-    """
-    for receiver in mailaddresses:
-        mailer = mt.MailThread(session, fromaddress, receiver, subject, content)
-        mailer.start()
-    session.quit()
-    """
     # mailer.mailSend(receiverstext.get("1.0", tkinter.END),subjecttext.get(),contenttext.get("1.0", tkinter.END),fromtext.get())
 
 
@@ -98,7 +92,7 @@ def runThis():
     print("froms", froms)
     subjectcount = 0
     maxsubject = len(subjects)
-    mailcount = 150
+    mailcount = 10
     fromscount = 0
     maxfrom = len(froms)
     tocount = 0
