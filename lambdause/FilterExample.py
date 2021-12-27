@@ -2,6 +2,7 @@ import functools as ft
 
 
 def mycompare(a, b):
+    # <0 if a<b, =0 if a==b and >0 if a>b
     return b - a
 
 
@@ -37,3 +38,4 @@ l.sort(key=ft.cmp_to_key(mycompare))
 print(l)
 l = list(filter(oddN, l))
 print(l)
+print(any(l))
