@@ -1,109 +1,85 @@
-import 'package:flutter/material.dart';
 
-void main() => runApp(VSJApp());
 
-class VSJApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Varanasi Software Junction',
-      theme: ThemeData(
-        primarySwatch: Colors.teal,
-      ),
-      home: VSJHomePage(title: 'Varanasi Software Junction'),
-    );
-  }
+
+
+< style >
+.vsjcard
+{
+    box - shadow: 0 4px 8px 0  # FFC604;
+    transition: 0.3
+s;
+width: 5
+px;
 }
 
-class VSJHomePage extends StatefulWidget {
-  int mainaxisno = 0;
-  int mainaxistotal = MainAxisAlignment.values.length;
-  int crossaxisno = 0;
-  int crossaxistotal = CrossAxisAlignment.values.length - 1;
-  VSJHomePage({Key? key, required this.title}) : super(key: key);
-  String getTitle() {
-    return "VSJ - Main: ${MainAxisAlignment.values[mainaxisno].toString().replaceAll("MainAxisAlignment.", "")},  Cross: ${CrossAxisAlignment.values[crossaxisno].toString().replaceAll("CrossAxisAlignment.", "")}";
-  }
+.vsjcard: hover
+{
+    box - shadow: 0 8px 16px 0  # FE413E;
+}
+.vsjinputTextArea
+{
+    font - weight: bolder;
+width: 100 %;
+box - sizing: border - box;
+border - radius: 5
+px;;
+height: 50
+px;
+padding: 5
+px;
+text - align: center;
 
-  MainAxisAlignment mainaxisalignment = MainAxisAlignment.values[0];
-  final String title;
-  String display = "Varanasi Software Junction";
+}
+.vsjoutputdiv
+{
+    background - color: lightgrey;
+width: 100 %;
+box - sizing: border - box;
+border - radius: 5
+px;
+padding: 5
+px;
+height: 200
+px;
+overflow: scroll;
 
-  @override
-  _VSJPageState createState() => _VSJPageState();
+}
+.vsjcanvasclass
+{
+    background - color: white;
+width: 100 %;
+box - sizing: border - box;
+border - radius: 5
+px;
+padding: 5
+px;
+height: 300
+px;
+
+}
+.vsjroundeddiv
+{
+    valign: middle;
+display: inline - block;
+background - color: lightpink;
+width: 50
+px;
+height: 50
+px;
+box - sizing: border - box;
+border - radius: 60 %;
+border - width: 5
+px;
+height: 30
+px;
+border - color: blue;
+border - style: ridge;
+text - align: center;
+
 }
 
-class _VSJPageState extends State<VSJHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.getTitle()),
-        centerTitle: true,
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: ElevatedButton(
-                  child: const Text("MainAxis",style:TextStyle(fontSize: 10)),
-                  onPressed: () {
-                    widget.mainaxisno =
-                        (widget.mainaxisno + 1) % widget.mainaxistotal;
-                    widget.display = widget.getTitle();
+< / style >
 
-                    setState(() {});
-                  },
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: ElevatedButton(
-                  child: const Text("Cross Axis",style:TextStyle(fontSize: 10)),
-                  onPressed: () {
-                    widget.crossaxisno =
-                        (widget.crossaxisno + 1) % widget.crossaxistotal;
-                    widget.display = widget.getTitle();
 
-                    setState(() {});
-                  },
-                ),
-              ),
-            ],
-          ),
-          Expanded(
-            child: ColoredBox(
-              color: Colors.yellowAccent,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.values[widget.mainaxisno],
-                crossAxisAlignment:
-                    CrossAxisAlignment.values[widget.crossaxisno],
-                children: <Widget>[
-                  Container(
-                      color: Colors.pinkAccent,
-                      child: Icon(Icons.emoji_emotions,
-                          size: 50, color: Colors.teal)),
-                  Container(
-                    color: Colors.blueAccent,
-                    child: Icon(Icons.emoji_emotions_outlined,
-                        size: 50, color: Colors.indigoAccent),
-                  ),
-                  Container(
-                    color: Colors.purpleAccent,
-                    child: Icon(Icons.emoji_emotions_sharp,
-                        size: 50, color: Colors.teal),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
+
+
