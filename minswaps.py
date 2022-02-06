@@ -2,9 +2,6 @@ class Solution:
     def fn(self, a):
         return a[1]
 
-    def swap(self, i, j):
-        self.arr[i], self.arr[j] = self.arr[j], self.arr[i]
-
     # Function to find the minimum number of swaps required to sort the array.
     def minSwaps(self, a):
         n = len(a)
