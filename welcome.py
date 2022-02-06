@@ -1,5 +1,5 @@
 n = 11
-m = 3 * n
+m = 4 * n
 # print(n,m)
 mid = (n + 1) // 2
 for row in range(1, mid):
