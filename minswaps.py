@@ -34,7 +34,7 @@ class Solution:
 #  Driver Code Starts
 
 
-nums = [10, 19, 6, 3, 5]
+nums = [1,5,2,3,4]
 obj = Solution()
 ans = obj.minSwaps(nums)
 print(ans)
