@@ -19,8 +19,8 @@ class Solution:
                 i += 1  # element in proper index
                 continue
             index = awithindex[i][0]
-            a[i], a[index] = a[index], a[i]
-            print("swap ", i, "with ", index, " values ", a[i], " with ", a[index])
+            a[awithindex[index][0]], a[index] = a[index], a[awithindex[index][0]]
+            print("swap ", awithindex[index][0], "with ", index, " values ", a[awithindex[index][0]], " with ", a[index])
             print(a)
             awithindex[i], awithindex[index] = awithindex[index], awithindex[i]
             # self.swap( i, awithindex[i][0])
