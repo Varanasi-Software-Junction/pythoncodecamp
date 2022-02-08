@@ -6,6 +6,7 @@ class Solution:
     def minSwaps(self, a):
         n = len(a)
         r = range(n)
+        print(nums)
         awithindex = [(i, a[i]) for i in r]  # 0 is index, 1 is value
         print("original ", awithindex)
         awithindex.sort(key=self.fn)  # sort with value
@@ -34,7 +35,7 @@ class Solution:
 #  Driver Code Starts
 
 
-nums = [1,5,2,3,4]
+nums = [5,4,3,2,1]
 obj = Solution()
 ans = obj.minSwaps(nums)
 print(ans)
