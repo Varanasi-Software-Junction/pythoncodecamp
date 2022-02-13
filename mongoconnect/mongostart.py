@@ -1,3 +1,4 @@
+import json
 import urllib.parse
 import pymongo
 from pymongo import MongoClient
@@ -7,17 +8,16 @@ client = pymongo.MongoClient("mongodb+srv://vsj:<password>@cluster0.kxlnv.mongod
 db = client.test
 
 """
+
+
 def get_database():
-
-
-
     # Provide the mongodb atlas url to connect python to mongodb using pymongo
-    #CONNECTION_STRING = "mongodb+srv://<username>:<password>@<cluster-name>.mongodb.net/myFirstDatabase"
+    # CONNECTION_STRING = "mongodb+srv://<username>:<password>@<cluster-name>.mongodb.net/myFirstDatabase"
 
     # Create a connection using MongoClient. You can import MongoClient or use pymongo.MongoClient
     from pymongo import MongoClient
-    pwd=urllib.parse.quote_plus("@TTa9S*TpKA7%PP")
-    #mongodb: // mongodb0.example.com: 27017
+    pwd = urllib.parse.quote_plus("@TTa9S*TpKA7%PP")
+    # mongodb: // mongodb0.example.com: 27017
 
     client = pymongo.MongoClient("mongodb://localhost:27017/vsj")
 
@@ -33,7 +33,25 @@ if __name__ == "__main__":
     collection_name = dbname["vsj"]
 
     item_1 = {
-        "_id": "100",
+        "_id": "10091",
         "teamname": "Tie"
     }
-    collection_name.insert_many([item_1])
+# collection_name.insert_many([item_1])
+# result = collection_name.find({"teamname": "Tie"})
+result = collection_name.find()
+print(result)
+a = list(result)
+print(a)
+a = a[0]
+js = json.dumps(a)
+print(js)
+js = json.loads(js)
+print(js)
+collection_name.update_many(
+    {"teamname": "Tie"},
+    {
+        "$set": {"teamname": "True"}
+    }
+)
+
+collection_name.delete_many({"_id": "U1IT00001"})
