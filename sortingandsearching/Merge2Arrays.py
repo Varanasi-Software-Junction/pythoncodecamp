@@ -1,4 +1,4 @@
-a = [2, 4, 6, 7]
+a = [2, 4, 6, 7,9]
 b = [1, 2, 3, 5, 8]
 n1 = len(a)
 n2 = len(b)
@@ -14,7 +14,8 @@ while i <= n1 - 1 and j <= n2 - 1:
     k += 1
 print(c)
 for p in range(i, n1):
-    c[k + p] = a[p]
+    c[k] = a[p]
+    k += 1
 for p in range(j, n2):
     c[k] = b[p]
     k += 1
