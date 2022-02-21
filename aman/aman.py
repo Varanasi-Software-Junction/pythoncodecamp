@@ -1,0 +1,1 @@
+print("aman\ngaurav\nshivam\n")
