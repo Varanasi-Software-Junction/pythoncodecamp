@@ -17,7 +17,7 @@ Observe the sequence
 2. Set b=21
 3. Set c=a-b
 4. a=b # b of previous state becomes a of current state
-5. b=c # c of previous stete becomes b of new state.
+5. b=c # c of previous state becomes b of new state.
 6. Go back to step 3 till c becomes zero
 
 """
