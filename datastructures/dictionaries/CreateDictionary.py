@@ -13,3 +13,6 @@ print(newdict4)
 newdict5 = dict.fromkeys(runs)
 # Create dictionary from a list with values = None
 print(newdict5)
+newdict6 = dict.fromkeys(runs,0)
+# Create dictionary from a list with values = 0
+print(newdict6)
