@@ -20,17 +20,27 @@ finditer()          Find all substrings where the RE matches, and returns them a
 
 """
 import re
+
 pattern = re.compile('[a-z]+')
-s1="This is train no 4356 to Varanasi"
-s2="this is "
-print(pattern.match(s1))#Matches the whole string and returns a match object if found from the beginning or None
+s1 = "This is train no 4356 to Varanasi"
+s2 = "this is "
+print(pattern.match(s1))  # Matches the whole string and returns a match object if found from the beginning or None
 print(pattern.match(s2))
-print(pattern.match(s1,re.IGNORECASE))#Matches the whole string and returns a match object if found from the beginning or None
-#Using the matched object
-m=pattern.match(s2)
+print(pattern.match(s1,
+                    re.IGNORECASE))  # Matches the whole string and returns a match object if found from the beginning or None
+# Using the matched object
+m = pattern.match(s2)
 print(m)
-print("Starts from ", m.span()[0]," ends at ",m.span()[1])
+print("Starts from ", m.span()[0], " ends at ", m.span()[1])
 print("The matched string", m[0])
+# Using Search
+s = "This is a train from Varanasi to Lucknow and that is a train from Lucknow to Varanasi"
 
-
-
+m = re.search("Varanasi", s)  # Returns the first match only
+print(m, m[0])
+m = re.findall("Varanasi", s)  # Retruns all instances
+print(m)
+m = re.finditer("Varanasi", s)  # Retruns all instances
+print(m)
+for x in m:
+    print(x)
