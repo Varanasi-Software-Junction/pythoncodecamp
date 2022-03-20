@@ -1,3 +1,8 @@
+
+
+
+
+
 a = [16, 0, 1, 9, 70]  # Create a list a
 print(a)
 a.sort()  # Sort the array
@@ -58,10 +63,15 @@ print(a)
 # Generate a random array and sort it
 from numpy import random
 
-a = list(random.randint(100, size=(10)))
+a = list(random.randint(100, size=10))
 a.sort(key=ft.cmp_to_key(lambda a, b: a - b))
 print(a)
 # Another way of doing the same thing
 a = [random.randint(100) for x in range(10)]
 a.sort(key=ft.cmp_to_key(lambda a, b: a - b))
 print(a)
+
+
+
+
+
