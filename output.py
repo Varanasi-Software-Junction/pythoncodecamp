@@ -1,16 +1,17 @@
-def f(x):
-    vowels = ["a", "e", 'i', "o", 'u']
-    x = x.lower()
-    count = 0
-    for ch in x:
-        if ch in vowels:
-            count += 1
-    return count
 
 
-a = ["Python", "Java", "C", "Fortran", "Pascal"]
-for x in a:
-    count = f(x)
-    print(x, count)
-a.sort(key=f)
-print(a)
+
+
+class VsjCubit extends Cubit<int> {
+  VsjCubit(int startvalue) : super(startvalue);
+  void double() => emit(state + state);
+  void triple() => emit(state + state + state);
+}
+/*
+ * Create Objects like this
+final v0 = VsjCubit(0); // state starts at 0
+final v10 = VsjCubit(10); // state starts at 10 
+ */
+
+
+
