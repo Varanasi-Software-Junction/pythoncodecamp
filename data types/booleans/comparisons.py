@@ -20,11 +20,11 @@ is not	negated object identity
 """
 print("1<1", 1 < 1)
 print("1<=1", 1 <= 1)
-print("1<2 and 1<3",1<2 and 2<3)
+print("1<2 and 1<3", 1 < 2 and 2 < 3)
 """
 Comparisons can be chained arbitrarily; for example, x < y <= z is equivalent to x < y and y <= z, except that y is evaluated only once (but in both cases z is not evaluated at all when x < y is found to be false).
 """
-print("1<2<3",1<2<3)#Same as previous one
+print("1<2<3", 1 < 2 < 3)  # Same as previous one
 """
 Objects of different types, except different numeric types, never compare equal. Furthermore, some types (for example, function objects) support only a degenerate notion of comparison where any two objects of that type are unequal. The <, <=, > and >= operators will raise a TypeError exception when comparing a complex number with another built-in numeric type, when the objects are of different types that cannot be compared, or in other cases where there is no defined ordering.
 
