@@ -15,7 +15,7 @@ def QuickSort(a, left, right):
         fp += 1
         a[fp], a[i] = a[i], a[fp]
     a[fp], a[left] = a[left], a[fp]
-    QuickSort(a, 0, fp - 1)
+    QuickSort(a, left, fp - 1)
     QuickSort(a, fp + 1, right)
 
 
