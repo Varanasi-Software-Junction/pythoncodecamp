@@ -1,3 +1,70 @@
+"""
+Overloadable Operators
+object.__lt__(self, other) <
+object.__le__(self, other) <=
+object.__eq__(self, other) ==
+object.__ne__(self, other) !=
+object.__gt__(self, other) >
+object.__ge__(self, other) >=
+x.__lt__(y), x<=y calls x.__le__(y), x==y calls x.__eq__(y), x!=y calls x.__ne__(y), x>y calls x.__gt__(y), and x>=y calls x.__ge__(y).
+
+
+
+object.__add__(self, other)
+object.__sub__(self, other)
+object.__mul__(self, other)
+object.__matmul__(self, other)
+object.__truediv__(self, other)
+object.__floordiv__(self, other)
+object.__mod__(self, other)
+object.__divmod__(self, other)
+object.__pow__(self, other[, modulo])
+object.__lshift__(self, other)
+object.__rshift__(self, other)
+object.__and__(self, other)
+object.__xor__(self, other)
+object.__or__(self, other)
+
+
+These methods are called to implement the binary arithmetic operations (+, -, *, @, /, //, %, divmod(), pow(), **, <<, >>, &, ^, |).
+
+
+
+object.__iadd__(self, other)
+object.__isub__(self, other)
+object.__imul__(self, other)
+object.__imatmul__(self, other)
+object.__itruediv__(self, other)
+object.__ifloordiv__(self, other)
+object.__imod__(self, other)
+object.__ipow__(self, other[, modulo])
+object.__ilshift__(self, other)
+object.__irshift__(self, other)
+object.__iand__(self, other)
+object.__ixor__(self, other)
+object.__ior__(self, other)
+
+
+These methods are called to implement the augmented arithmetic assignments (+=, -=, *=, @=, /=, //=, %=, **=, <<=, >>=, &=, ^=, |=).
+
+
+
+
+
+
+g__(self)
+object.__pos__(self)
+object.__abs__(self)
+object.__invert__(self)
+Called to implement the unary arithmetic operations (-, +, abs() and ~).
+
+
+
+
+
+
+"""
+
 class Currency:
     def __next__(self):
         self.n+=1
