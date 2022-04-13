@@ -1,4 +1,4 @@
-class A:#Original class to be inherited
+class A:  # Original class to be inherited
     def f1(self):
         print("F1 in A")
 

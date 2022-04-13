@@ -26,6 +26,6 @@ class Book:  # Definiton of class begins
 
 b1 = Book("Basic C", 100, "Cb")
 b2 = Book("Adv C", 100, "C")
-print(b1)
-print(b2)
-print("Book = {0}".format(b1))
+# print(b1)
+# print(b2)
+# print("Book = {0}".format(b1))

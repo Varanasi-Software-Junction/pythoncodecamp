@@ -1,9 +1,5 @@
 import book as book
 
-
-
-
-
 '''
 Using a class in another class. We have imported the Book class
 '''
@@ -22,8 +18,4 @@ class Person:
 
 b1 = book.Book("Basic C", 100, "C")
 p = Person("Raju", 50, "Delhi", b1)
-print(p)
-
-
-
-
+# print(p)

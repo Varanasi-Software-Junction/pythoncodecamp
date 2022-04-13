@@ -1,24 +1,18 @@
+def isNegativeWeightCycle(self, n, edges):
+    dist = [float("inf")] * n
+    dist[0] = 0
 
+    for i in range(n - 1):
+        updated = False
+    for u, v, w in edges:
+        if dist[v] > dist[u] + w:
+            dist[v] = dist[u] + w
+            updated = True
+    if not updated:
+        return 0
 
+    for u, v, w in edges:
+        if dist[v] > dist[u] + w:
+            return 1
 
-
-
-
-
-
-
-
-
-
-C:\Users\Lenovo\AppData\Local\Microsoft\WindowsApps\python3.10.exe C:/pythoncodecamp/OOPs/Person.py
-Bookname = Basic C, Price = 100, Subject = Cb
-Bookname = Adv C, Price = 100, Subject = C
-Book = Bookname = Basic C, Price = 100, Subject = Cb
-Name=Raju, Age = 50, Address=Delhi, Book=(Bookname = Basic C, Price = 100, Subject = C)
-
-Process finished with exit code 0
-
-
-
-
-
+    return 0
