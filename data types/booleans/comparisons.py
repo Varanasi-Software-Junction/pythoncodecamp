@@ -1,3 +1,8 @@
+
+
+
+
+
 """
  Comparisons
 There are eight comparison operations in Python.
@@ -37,3 +42,9 @@ The behavior of the is and is not operators cannot be customized; also they can 
 Two more operations with the same syntactic priority, in and not in, are supported only by sequence types  list, tuple, range.
 
 """
+
+
+
+
+
+

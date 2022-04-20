@@ -1,18 +1,8 @@
-def isNegativeWeightCycle(self, n, edges):
-    dist = [float("inf")] * n
-    dist[0] = 0
-
-    for i in range(n - 1):
-        updated = False
-    for u, v, w in edges:
-        if dist[v] > dist[u] + w:
-            dist[v] = dist[u] + w
-            updated = True
-    if not updated:
-        return 0
-
-    for u, v, w in edges:
-        if dist[v] > dist[u] + w:
-            return 1
-
-    return 0
+notes = [2000, 1000, 500, 200, 100, 50, 20, 10, 5, 2, 1]
+amt = 3501
+n = len(notes)
+for i in range(n):
+    x = amt // notes[i]
+    amt = amt - x * notes[i]
+    if x > 0:
+        print(x, " X ", notes[i])
