@@ -1,7 +1,3 @@
-
-
-
-
 """
 Starting a class that will be a complete example of Python OOPs
 We will implement operator overloading as well.
@@ -97,6 +93,9 @@ class Currency:  # Starting a class declaration
     def __gt__(self, other):  # Implements the > operator
         return self.total > other.total
 
+    def __le__(self, other):
+        return self.total <= other.total
+
     def __getitem__(self, item):
         if item == 0:
             return self.pad0(self.total // 100)
@@ -114,9 +113,6 @@ for i in c1:
     print(i)
 c2 = Currency(2, -90)
 print("C2 ", c2)
-print("0",c2[0])
-print("1",c2[1])
-
-
-
-
+print("0", c2[0])
+print("1", c2[1])
+print(c1 <= c2)
