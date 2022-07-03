@@ -15,7 +15,7 @@ code = response.status_code
 print(code)
 # 200 means success
 # Status code 404 not found
-# Sttus code 401 is not sauthorized
+# Sttus code 401 is not authorized
 # print(response.text)
 if code != 200:
     print("Error")
