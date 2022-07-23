@@ -1,8 +1,8 @@
 def heapSort(heap):
     n = len(heap)
-    a = [0] * (n-1)
+    a = [0] * (n - 1)
     for i in range(1, n):
-        a[n -1- i] = heap[1]
+        a[n - 1 - i] = heap[1]
         length = n - i + 1
         heap[1] = heap[n - i]
         length -= 1
