@@ -2,7 +2,7 @@ def heapSort(heap):
     n = len(heap)
     a = [0] * (n-1)
     for i in range(1, n):
-        a[n - i] = heap[i]
+        a[n -1- i] = heap[1]
         length = n - i + 1
         heap[1] = heap[n - i]
         length -= 1
@@ -46,6 +46,7 @@ def makeHeap(a):
 
 
 a = [1, 2, 33, 4, 5, -6, 7]
+print(a)
 heap = makeHeap(a)
 print(heap)
 a = heapSort(heap)
