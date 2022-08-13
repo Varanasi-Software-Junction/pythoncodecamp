@@ -5,5 +5,6 @@ question = '{"questionno":1,"question":"What is the capital of Japan","option1":
 print(question, type(question))
 question = json.loads(question)
 print(question, type(question))
+print(question["questionno"])
 question = json.dumps(question)
 print(question, type(question))
