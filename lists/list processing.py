@@ -35,13 +35,13 @@ for i in range(n):
 # Lists can contain elements of different types
 l = [1, "Two", 3, "Four"]
 print(l)
-#Loop through using in
+# Loop through using in
 for x in l:
     print(x)
 """
 Looping via index is done using the range 
 """
-n=len(l)
+n = len(l)
 for i in range(n):
     print(l[i])
 
@@ -51,24 +51,22 @@ General Syntax is
 l[startindex:lastindex + 1]
 Extends to the end if not given
 """
-l=[0,"One",2,"Three",4,"Five"]
-print("1 to 3",l[1:4])
-print("1 to end",l[1:])
-print("Beginning to 3",l[:4])
-print("Complete Array ",l[:])
+l = [0, "One", 2, "Three", 4, "Five"]
+print("1 to 3", l[1:4])
+print("1 to end", l[1:])
+print("Beginning to 3", l[:4])
+print("Complete Array ", l[:])
 """
 Negative indexing
 """
-print("Last 2 elements",l[-2:])
+print("Last 2 elements", l[-2:])
 print(l)
-print("2 from last to 4 from last",l[-4:-1])
-#General Syntax
-print("2 from last to 4 from last",l[-4:-2 + 1])
+print("2 from last to 4 from last", l[-4:-1])
+# General Syntax
+print("2 from last to 4 from last", l[-4:-2 + 1])
 """
 Functions min and max sorting etc are only supported for elements of the same type
 """
-l=[0,1,2,3,4,5]
+l = [0, 1, 2, 3, 4, 5]
 print("Min ", min(l))
 print("Max ", max(l))
-
-
