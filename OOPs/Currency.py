@@ -58,7 +58,7 @@ Note: It is not possible to change the number of operands of an operator. For ex
 
 
 class Currency:  # Starting a class declaration
-    def __next__(self):  # Returs rupees the first time and paise the next time
+    def __next__(self):  # Returs rupees the first time and paise the nextchar time
         n = self.counter
         self.counter += 1
         if self.counter > 2:

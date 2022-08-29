@@ -66,7 +66,7 @@ def placeQueens(queenno):
 
         else:
             placeQueens(queenno + 1)
-            # Place the next queen
+            # Place the nextchar queen
 
 
 placeQueens(1)

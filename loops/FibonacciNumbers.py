@@ -15,5 +15,5 @@ print(a, b, end=" ")  # Print the 1st two
 for i in range(3, n + 1):  # Start from 3 because first 2 are already printed
     c = a + b  # Calculate new number
     print(c, end=" ")  # Print the new number
-    a = b  # Advance a. Previous b becomes a for the next term
-    b = c  # Previous c becomes b for next term
+    a = b  # Advance a. Previous b becomes a for the nextchar term
+    b = c  # Previous c becomes b for nextchar term

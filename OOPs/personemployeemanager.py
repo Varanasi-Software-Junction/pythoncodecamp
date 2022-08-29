@@ -4,7 +4,7 @@ Imagine the following scenario.
 1. You developed a class called Person with the following data to be used in
 an address book application. We store name, address and mobile numbers in the Person class
 
-2. The next project we are asked to manage Employee details so we plan an Employee class
+2. The nextchar project we are asked to manage Employee details so we plan an Employee class
 The Employee class needs to store name, address, mobileno, post and salary.
 
 The first 3 members are common to both classes. More importantly every Employee is a Person.

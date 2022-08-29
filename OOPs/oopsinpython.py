@@ -31,7 +31,7 @@ where things can be implemented
 4. Make the parts and combine.
 This is top down design. We started with the final car and broke it into parts.
 
-For the next car we will already have a stock of parts. We will try and use this to the
+For the nextchar car we will already have a stock of parts. We will try and use this to the
 maximum. Bottom-up design
 
 Terms
