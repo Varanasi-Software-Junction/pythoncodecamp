@@ -1,9 +1,8 @@
+from nltk import SyllableTokenizer
 
-from nltk import word_tokenize, SyllableTokenizer
 tk = SyllableTokenizer()
 word = "ShriShriShriChampakKumarJiRaiSaheb"
 
-
 output = tk.tokenize(word)
 
-print(output)
+print(output, "No of syllables", len(output))

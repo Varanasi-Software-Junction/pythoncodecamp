@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<data>
+    <city name="Varanasi">
+        <rank>1</rank>
+        <year>2022</year>
+        <neighbor name="Ghazipur" direction="North"/>
+        <neighbor name="Sonbhadra" direction="South"/>
+    </city>
+    <city name="Ghazipur">
+        <rank>3</rank>
+        <year>2022</year>
+
+        <neighbor name="Varanasi" direction="North"/>
+    </city>
+    <city name="Sonbhadra">
+        <rank>2</rank>
+        <year>2022</year>
+        <neighbor name="Varanasi" direction="S"/>
+    </city>
+</data>
