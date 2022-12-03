@@ -1,18 +1,18 @@
 def printMatrix(m):
     n = len(m)
-    for i in (range(1, n)):
+    for i in range(1, n):
         for j in reversed(range(i, n)):
             r = m[i][j]
             print(r, end="\t")
         print()
 
 
-p = [30, 35, 15, 5, 10, 20, 25]
+p = [30, 35, 15, 5]
 inf = 10000000000000
 n = len(p)
 x = [0 for x in range(n)]
 m = [x.copy() for i in range(n)]
-
+s=m.copy()
 for i in range(1, n):
     m[i][i] = 0
 
@@ -24,7 +24,9 @@ for length in range(2, n):
             q = m[i][k] + m[k + 1][j] + p[i - 1] * p[k] * p[j]
             if q < m[i][j]:
                 m[i][j] = q
+                # s[i][j]=k
 
+printMatrix(s)
 printMatrix(m)
-minsteps=m[1][-1]
+minsteps = m[1][-1]
 print(minsteps)
