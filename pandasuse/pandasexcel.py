@@ -1,23 +1,26 @@
-import  matplotlib.pyplot as plt
 import pandas as pd
-from sphinx.addnodes import index
-def find(data,name):
+
+
+def find(data, name):
     query = data[(data["Player"] == name)]
     return query
-def updateName(data,oldname,newname):
-    query=find(data,oldname)
+
+
+def updateName(data, oldname, newname):
+    query = find(data, oldname)
     index = query.index[0]
     data.loc[index, ["Player"]] = newname
     return data
-data=pd.read_csv("data.csv")
-updateName(data,'B',"Popat")
+
+
+data = pd.read_csv("data.csv")
+updateName(data, 'B', "Popat")
 print(data)
 
-#print(query)
-#print(query.index[0])
-data=data.drop([0])
+# print(query)
+# print(query.index[0])
+data = data.drop([0])
 print(data)
-
 
 """
 #print(data)
