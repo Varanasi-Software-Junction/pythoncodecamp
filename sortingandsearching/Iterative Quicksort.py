@@ -39,6 +39,6 @@ def quickSort(a):
 
 
 a = [9, 8, 7, 6, 5, 4, 3, 2, 1]
-print(a)
+print("Input array", a)
 quickSort(a)
-print(a)
+print("sorted array", a)
