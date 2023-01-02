@@ -49,28 +49,36 @@ class Booking:
                                                                             self.isbooked, self.patient)
 
 
-try:
-    pass
-    datafile = open('bookingstore', 'rb')
-    data = pickle.load(datafile)
-except:
-    pass
-    data = [Booking(sno=1, starttime=Time(hour=11, minute=15), endtime=Time(hour=11, minute=35)),
-            Booking(sno=2, starttime=Time(hour=11, minute=40), endtime=Time(hour=12, minute=0))]
-finally:
+def readData():
     try:
-        datafile.close()
+        pass
+        datafile = open('bookingstore', 'rb')
+        data = pickle.load(datafile)
     except:
         pass
+        data = [Booking(sno=1, starttime=Time(hour=11, minute=15), endtime=Time(hour=11, minute=35)),
+                Booking(sno=2, starttime=Time(hour=11, minute=40), endtime=Time(hour=12, minute=0))]
+    finally:
+        try:
+            datafile.close()
+        except:
+            pass
+    return data
 
+
+def saveData():
+    datafile = open('bookingstore', 'ab')
+    pickle.dump(data, datafile)
+    datafile.close()
+
+
+data = readData()
 while True:
     print("0-Exit,1-Book,2-Cancel,3-Show All")
     option = int(input("Enter option\n"))
     if option == 0:
 
-        datafile = open('bookingstore', 'ab')
-        pickle.dump(data, datafile)
-        datafile.close()
+        saveData()
 
         break
     elif option == 1:
