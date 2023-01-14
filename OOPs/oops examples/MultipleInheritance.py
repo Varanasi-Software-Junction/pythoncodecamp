@@ -1,26 +1,17 @@
 class A:
     def f1(self):
-        print("F1 in A")
-
-    def f2(self):
-        print("F2 in A")
+        print("f1 in A")
 
 
-class B(A):
+class B:
     def f1(self):
-        print("F1 in B")
+        print("f1 in B")
 
 
-
-class C(A,B):
-    def f1(self):
-        print("F1 in C")
+class C(A, B):
+    pass
 
 
-
-a = A()
-a.f1()
-a.f2()
-b = B()
-b.f1()
-b.f2()
+c = C()
+c.f1()
+print(C.mro())

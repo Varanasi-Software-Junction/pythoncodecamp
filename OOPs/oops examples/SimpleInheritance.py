@@ -9,6 +9,7 @@ class A:
 class B(A):
     def f1(self):
         print("F1 in B")
+        super().f1()
 
 
 b = B()

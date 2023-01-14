@@ -13,6 +13,6 @@ class StaticAndInstanceDemo:
 
 StaticAndInstanceDemo.IamStaticMethod()
 print(StaticAndInstanceDemo.IamStaticVariable)
-a=StaticAndInstanceDemo()
+a = StaticAndInstanceDemo()
 a.IamInstanceMethod()
 print(a.IamInstanceVariable)
