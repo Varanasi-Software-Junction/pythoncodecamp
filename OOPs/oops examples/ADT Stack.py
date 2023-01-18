@@ -1,13 +1,13 @@
 class Stack:
-    def __init__(aman):
-        aman.data = []
+    def __init__(self):
+        self.data = []
 
     def push(self, value):
         self.data.append(value)
 
-    def pop(myself):
-        if myself.data:
-            return myself.data.pop()
+    def pop(self):
+        if self.data:
+            return self.data.pop()
         return None
 
     def empty(self):
