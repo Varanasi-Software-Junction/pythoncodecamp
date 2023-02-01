@@ -37,6 +37,16 @@ class ListHeader:
             start = start.next
         start.next = ListNode(value)
 
+    def count(self):
+        if self.head == None:
+            return 0
+        start = self.head
+        result = 1
+        while start.next is not None:
+            result += 1
+            start = start.next
+        return result
+
     def find(self, value):
         start = self.head
         while start is not None:
@@ -59,3 +69,4 @@ if __name__ == '__main__':
     head.traverse()
     print(head.find(10))
     print(head.find(1))
+    print(head.count())
