@@ -27,6 +27,8 @@ n = 1
 listlinks, listreviews = [], []
 listnames, listprices = [], []
 listasins, listmanufacturers = [], []
+listdescription, listproductdescription = [], []
+
 for div in divs:
     strdiv = str(div)
     if "#customerReview" in strdiv:
@@ -36,11 +38,13 @@ for div in divs:
         # print(n, "Reviews", reviews, "href", href)
         listreviews.append(reviews)
         listlinks.append(href)
-        asin, manufacturer, productname, price = dwn.getProductName(href)
+        productdescription, description, asin, manufacturer, productname, price = dwn.getProductName(href)
         listnames.append(productname)
         listprices.append(price)
         listmanufacturers.append(manufacturer)
         listasins.append(asin)
+        listdescription.append(description)
+        listproductdescription.append(productdescription)
         print(asin, manufacturer)
     # print(productname)
 
@@ -50,4 +54,5 @@ print(listreviews)
 print(listlinks)
 print(listprices)
 print(listnames)
-dwn.saveToCSV(listasins, listmanufacturers, listnames, listprices, listreviews, listlinks)
+dwn.saveToCSV(listproductdescription, listdescription, listasins, listmanufacturers, listnames, listprices, listreviews,
+              listlinks)

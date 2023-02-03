@@ -6,8 +6,9 @@ from bs4 import BeautifulSoup as bs
 import SeleniumDownloader as dwn
 
 
-def saveToCSV(asins, manufacturers, names, prices, reviews, links):
-    dct = {'ASINS': asins, 'manufacturers': manufacturers, 'names': names, 'prices': prices, 'reviews': reviews,
+def saveToCSV(productdescriptions, descriptions, asins, manufacturers, names, prices, reviews, links):
+    dct = {"productdescriptions": productdescriptions, "descriptions": descriptions, 'ASINS': asins,
+           'manufacturers': manufacturers, 'names': names, 'prices': prices, 'reviews': reviews,
            'links': links}
 
     df = pd.DataFrame(dct)
@@ -17,22 +18,54 @@ def saveToCSV(asins, manufacturers, names, prices, reviews, links):
 
 
 def getProductName(producturl):
+    name = "Not Found"
+    price = "Not Found"
+    asin = "Not Found"
+    description = "Not Found"
+    productdescription = "Not Found"
+    manufacturer = "Not Found"
     try:
+
         html = dwn.downloadUrl(producturl)
         scraper = bs(html, "html.parser")
-        title = scraper.find("span", attrs={"id": "productTitle"})
-        price = scraper.find("span", attrs={"class": "a-price-whole"})
-        manufacturer = None
-        asin = None
+        try:
+            title = scraper.find("span", attrs={"id": "productTitle"})
+            name = title.text
+
+        except:
+            pass
+        try:
+            tprice = scraper.find("span", attrs={"class": "a-price-whole"})
+            price = tprice.text
+        except:
+            pass
+
         div = scraper.find("div", attrs={"id": "detailBullets_feature_div"})
+        productdescription = div.text
         ulscraper = bs(str(div), "html.parser")
         LIs = ulscraper.find_all("li")
-        manufacturer = LIs[3].text.replace("Manufacturer", "").replace(":", "").strip()
-        asin = LIs[4].text.replace("ASIN", "").replace(":", "").strip()
+        n=len(LIs)
+        for i in range(n):
+            currentli=str(LIs[i])
+            if "Manufacturer" in currentli:
+                try:
+                    manufacturer = LIs[i].text.replace("Manufacturer", "").replace(":", "").replace("\n", "").strip()
+                    manufacturer=" ".join(manufacturer.split())
+                except:
+                    pass
+            if "ASIN" in currentli:
+                try:
+                    asin = LIs[i].text.replace("ASIN", "").replace(":", "").replace("\n", "").strip()
+                    asin=" ".join(asin.split())
+                except:
+                    pass
 
-        return asin, manufacturer, title.text, price.text
+        description = "Name = " + name + ', Price=' + price
+
+        return productdescription, description, asin, manufacturer, name, price
     except:
-        return "Not Found", "Not Found", "Not Found", "Not Found"
+        description = "Name = " + name + ', Price=' + price
+        return productdescription, description, asin, manufacturer, name, price
 
 
 def getDomainName(url):
