@@ -24,19 +24,30 @@ divs = scraper.find_all("span")
 # print(divs)
 n = 1
 # scraper = bs(html, 'html.parser')
+listlinks, listreviews = [], []
+listnames, listprices = [], []
+listasins, listmanufacturers = [], []
 for div in divs:
     strdiv = str(div)
-    scraper = bs(strdiv, "html.parser")
-    price = scraper.find("span", attrs={"class": 'a-price-whole'})
-    if price is None:
-        continue
-    price = price.text
-    # print(price)
-
     if "#customerReview" in strdiv:
         href, reviews = dwn.getReview(strdiv)
         href = domainname + href
-        href=href.replace("#customerReview","")
-        print(n, "Reviews", reviews, "Price", price, "href", href)
-        n += 1
-print("total ", n-1)
+        href = href.replace("#customerReview", "")
+        # print(n, "Reviews", reviews, "href", href)
+        listreviews.append(reviews)
+        listlinks.append(href)
+        asin, manufacturer, productname, price = dwn.getProductName(href)
+        listnames.append(productname)
+        listprices.append(price)
+        listmanufacturers.append(manufacturer)
+        listasins.append(asin)
+        print(asin, manufacturer)
+    # print(productname)
+
+    n += 1
+print("total ", n - 1)
+print(listreviews)
+print(listlinks)
+print(listprices)
+print(listnames)
+dwn.saveToCSV(listasins, listmanufacturers, listnames, listprices, listreviews, listlinks)

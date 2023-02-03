@@ -1,8 +1,38 @@
-# import requests
-# import urllib.request
 from urllib.parse import urlparse
 
+import pandas as pd
 from bs4 import BeautifulSoup as bs
+
+import SeleniumDownloader as dwn
+
+
+def saveToCSV(asins, manufacturers, names, prices, reviews, links):
+    dct = {'ASINS': asins, 'manufacturers': manufacturers, 'names': names, 'prices': prices, 'reviews': reviews,
+           'links': links}
+
+    df = pd.DataFrame(dct)
+    df.to_csv("amazon.csv")
+
+    print(df)
+
+
+def getProductName(producturl):
+    try:
+        html = dwn.downloadUrl(producturl)
+        scraper = bs(html, "html.parser")
+        title = scraper.find("span", attrs={"id": "productTitle"})
+        price = scraper.find("span", attrs={"class": "a-price-whole"})
+        manufacturer = None
+        asin = None
+        div = scraper.find("div", attrs={"id": "detailBullets_feature_div"})
+        ulscraper = bs(str(div), "html.parser")
+        LIs = ulscraper.find_all("li")
+        manufacturer = LIs[3].text.replace("Manufacturer", "").replace(":", "").strip()
+        asin = LIs[4].text.replace("ASIN", "").replace(":", "").strip()
+
+        return asin, manufacturer, title.text, price.text
+    except:
+        return "Not Found", "Not Found", "Not Found", "Not Found"
 
 
 def getDomainName(url):
