@@ -1,11 +1,20 @@
-def countVowels(s):
-    count = {'a': 0, 'e': 0, 'i': 0, 'o': 0, 'u': 0}
-    s = s.lower()
-    for ch in s:
-        if count.get(ch) != None:
-            count[ch] += 1
-    return count
 
 
-result = countVowels("Baba Black Sheep")
-print(result)
+
+
+
+
+Input list [4, 3, 7, -5, 8]
+Array after  1  iterations  [-5, 3, 7, 4, 8]
+Array after  2  iterations  [-5, 3, 7, 4, 8]
+Array after  3  iterations  [-5, 3, 4, 7, 8]
+Array after  4  iterations  [-5, 3, 4, 7, 8]
+Sorted Array  [-5, 3, 4, 7, 8]
+
+Process finished with exit code 0
+
+
+
+
+
+

@@ -1,3 +1,8 @@
+
+
+
+
+
 def heapSort(heap):
     n = len(heap)
     a = [0] * (n - 1)
@@ -51,3 +56,10 @@ heap = makeHeap(a)
 print(heap)
 a = heapSort(heap)
 print(a)
+
+
+
+
+
+
+

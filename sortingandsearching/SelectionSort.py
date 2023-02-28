@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
 a = [4, 3, 7, -5, 8]  # The input list
 print("Input list", a)
 n = len(a)  # Get length of list
@@ -10,3 +21,12 @@ for i in range(n - 1):  # Loop through the array one time less than the length o
     a[i], a[minpos] = a[minpos], a[i]  # Swap a[i] and a[minpos]
     print("Array after ", i + 1, " iterations ", a)
 print("Sorted Array ", a)
+
+
+
+
+
+
+
+
+

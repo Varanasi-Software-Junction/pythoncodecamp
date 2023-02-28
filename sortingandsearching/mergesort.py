@@ -1,3 +1,7 @@
+
+
+
+
 def mergesort(a, left, right):
     if left >= right:
         return
@@ -32,3 +36,9 @@ a = [22, 3, 4, -6, 5, 4]
 print(a)
 mergesort(a, 0, len(a) - 1)
 print(a)
+
+
+
+
+
+
