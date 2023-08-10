@@ -1,6 +1,6 @@
 from sympy import symbols, Eq, solve, N
 r = symbols('r', real=True)
-emi = 100
+emi = -100
 p = 10
 n = 5
 
