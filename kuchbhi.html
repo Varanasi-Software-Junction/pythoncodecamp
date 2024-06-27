@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let status = 'open';
+        function showHide() {
+
+
+
+
+            let x = document.getElementById("d");
+            if (status == 'open') {
+                status = "closed";
+                x.style.display = "none";
+                document.getElementById('b').innerHTML = "Show";
+            }
+            else {
+                status = "open";
+                document.getElementById('b').innerHTML = "Hide";
+                x.style.display = "block";
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <button id="b" onclick="showHide()">Hide</button>
+    <div id="d">Shopping Cart</div>
+</body>
+
+</html>
