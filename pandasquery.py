@@ -12,3 +12,5 @@ df = pd.DataFrame(data)
 print(df)
 lessthan40 = df[df['Age'] < 40]
 print("Less than 40:\n", lessthan40)
+x=df.query("City=='New York'")
+print(x)
