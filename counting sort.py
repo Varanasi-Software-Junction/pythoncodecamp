@@ -1,3 +1,5 @@
+import math
+print(math.pi)
 a = [4, 3, 5, 5, 6, 1]
 n = len(a)
 b = [0 for i in range(n)]
