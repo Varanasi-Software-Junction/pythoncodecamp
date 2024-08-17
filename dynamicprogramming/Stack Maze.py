@@ -2,7 +2,14 @@ def printMatrix(mat):
     # print the matrix function
     for i in mat:
         for j in i:
-            print(j, end='  ')
+            ch=j
+            if j==1:
+                ch='_'
+            elif j==0:
+                ch='X'
+            else:
+                ch='*'
+            print(ch, end='  ')
         print()
 
 
@@ -17,6 +24,7 @@ def isValid(y, x, maxy, maxx):
 
 def makeMove(mat, y, x, path, max_y, max_x):
     # In this function move the matrix path
+
     """
     dir=0 up
     dir=1 forward
