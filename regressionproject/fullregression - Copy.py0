@@ -1,0 +1,48 @@
+class RegressionPredict:
+    def __init__(self, x, y,projecttitle, xlabel="X", ylabel="Y"):
+        self.x = x
+        self.y = y
+        self.projecttitle=projecttitle
+        self.n = len(x)
+        self.sigmax = sum(x)
+        self.sigmay = sum(y)
+        self.x2 = [i*i for i in x]
+        self.sigmax2 = sum([i*i for i in x])
+        self.sigmay2 = sum([i*i for i in y])
+        self.sigmaxy = sum([x[i]*y[i] for i in range(self.n)])
+        self.b = (self.n * self.sigmaxy - self.sigmax * self.sigmay) / \
+            (self.n * self.sigmax2 - self.sigmax2)
+        self.a = (self.sigmay - self.b * self.sigmax) / self.n
+
+        r = self.sigmaxy - (self.sigmax * self.sigmay / self.n)
+        self.r = r / ((self.sigmax2 - (self.sigmax2 / self.n))
+                      * (self.sigmay2 - (self.sigmay**2 / self.n)))**0.5
+
+    def predict(self, x):
+        return [self.a + self.b * xi for xi in x]
+
+    def __str__(self):
+        output = f"X = {self.x} \nY = {self.y}\nX2 = {self.x2} \nY2 = {self.sigmay2}\nXY = {self.sigmaxy}\n"
+        return output
+
+    def plot(self, digramtitle, plottitle, xlabel, ylabel):
+        plt.xlabel(xlabel)
+        plt.ylabel(ylabel)
+        plt.title(self.projecttitle)
+        plt.grid(True)
+        regressiondata = self.predict(self.x)
+        plt.plot(self.x, self.y, color='red', label=digramtitle)
+        plt.plot(self.x, regressiondata, color='green',
+                 label="Line of Best Fit")
+
+        predictruninput = [i for i in range(1, 9)]
+        predictrunoutput = self.predict(predictruninput)
+        regressiondata = self.predict(self.x)
+        plt.plot(self.x, self.y, color='red', label=digramtitle)
+        plt.plot(self.x, regressiondata, color='green',
+                 label="Line of Best Fit")
+        plt.plot(predictruninput, predictrunoutput,
+                 color='yellow', label="Predicted Run")
+        plt.legend()
+        plt.tight_layout()
+        plt.show()
