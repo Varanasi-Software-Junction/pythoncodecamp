@@ -163,8 +163,8 @@ You can contribute by adding:
 
 ## Author
 
-**Varanasi Software Junction**
-Python, AI, and programming education from Varanasi.
+**Champak Roy**
+Python, AI, and programming education from Champak Roy.
 
 ## License
 
